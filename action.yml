@@ -1,0 +1,18 @@
+name: 'Action README Generator'
+description: 'Automatically generate Inputs, Outputs, and Usage sections for your Action README.md'
+inputs:
+  action-yml:
+    description: 'Path to action.yml'
+    default: 'action.yml'
+  readme-md:
+    description: 'Path to README.md'
+    default: 'README.md'
+  update:
+    description: 'Whether to update the README.md file directly'
+    default: 'true'
+outputs:
+  markdown:
+    description: 'The generated markdown'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
